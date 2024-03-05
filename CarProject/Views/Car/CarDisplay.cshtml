@@ -1,0 +1,65 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<head>
+    <meta charset="utf-8" />
+    <title>Car Display!</title>
+    <link rel="stylesheet" href="./css/site.css" />
+</head>
+
+<h1 style="text-align : center">
+    <b>
+        Car Display!
+    </b>
+</h1>
+
+<div>
+    <label>Test Input</label>
+    <input type="text" name="TestInp" id="TestInp" class="form-control" placeholder="Test" />
+    <div><hr />
+        <input onclick ="test()" class="btn btn-primary" name="testButton" id="testButton" type="button" value="Save" />
+    </div>
+    <div>
+        <hr />
+        <input onclick="test2()" class="btn btn-primary" type="button" value="Save2" />
+    </div>
+</div>
+
+<body onload="UpdateCarTable()">
+    <div>
+        <h3>
+            Enter Information about your desired car!
+        </h3>
+        <div>
+            <label>Enter Year</label>
+            <input type="text" name="CarYear" id="CarYear" class="form-control" placeholder="Enter Car Year" />
+        </div>
+        <div>
+            <label>Enter Make</label>
+            <input type="text" name="CarMake" id="CarMake" class="form-control" placeholder="Enter Car Make" />
+        </div>
+        <div>
+            <label>Enter Model</label>
+            <input type="text" name="CarModel" id="CarModel" class="form-control" placeholder="Enter Car Model" />
+        </div>
+        <div><hr />
+            <input onclick="addCar()" class="btn btn-primary" name="saveButton" id="saveButton" type="button" value="Save"/>
+        </div>
+    </div><hr />
+    <table id="carTable" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th align="left" class="productth">ID</th>
+                <th align="left" class="productth">Car Year</th>
+                <th align="left" class="productth">Car Make</th>
+                <th align="left" class="productth">Car Model</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script type="text/javascript" src="./js/site.js"></script>
+</body>

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarProject", "CarProject\CarProject.csproj", "{A39C0780-88F5-44BD-90DE-A71373DD2C38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{436972A7-0AC5-4DB3-8F14-7F72134B6484}"
+	ProjectSection(SolutionItems) = preProject
+		README_javascript.txt = README_javascript.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A39C0780-88F5-44BD-90DE-A71373DD2C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39C0780-88F5-44BD-90DE-A71373DD2C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39C0780-88F5-44BD-90DE-A71373DD2C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39C0780-88F5-44BD-90DE-A71373DD2C38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EAA1644-4A47-4D79-8F47-7A10A320AECA}
+	EndGlobalSection
+EndGlobal
