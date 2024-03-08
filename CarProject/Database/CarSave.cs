@@ -4,11 +4,12 @@ namespace CarProject.Database
 {
     public class CarSave
     {
+        public int listSize { get; set; }
         public void SaveCarText(Car saveCar)
         {
             string fileLoc = "C:\\Users\\sean_\\source\\repos\\CarProject\\CarProject\\Database\\CarDB.txt";
 
-            string carTemp = (saveCar.carId).ToString() + " ";
+            string carTemp = (saveCar.Id).ToString() + " ";
             carTemp += (saveCar.Year).ToString() + " ";
             carTemp += saveCar.Make + " ";
             carTemp += saveCar.Model;
@@ -31,11 +32,11 @@ namespace CarProject.Database
                 string prop = "";
                 for (int i = 0; i < textLine.Length; i++)
                 {
-                    if(textLine.Substring(i,1).Equals(" "))
+                    if(textLine.Substring(i,1).Equals(" ") && counter <= 2)
                     {
                         if(counter == 0)
                         {
-                            addCar.carId = Convert.ToInt32(prop);
+                            addCar.Id= Convert.ToInt32(prop);
                             prop = "";
                         }
                         else if (counter == 1)
@@ -65,6 +66,7 @@ namespace CarProject.Database
             }
 
             reader.Close();
+            listSize = carList.Count;
             return carList;
         }
 
