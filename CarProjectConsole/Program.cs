@@ -1,5 +1,6 @@
 ﻿using CarProjectConsole.Buisness;
 using CarProjectConsole.DataAccess.Text;
+using CarProjectConsole.DataAccess.XML;
 using CarProjectConsole.Model;
 
 namespace CarProjectConsole
@@ -13,21 +14,40 @@ namespace CarProjectConsole
 
             string? type = Console.ReadLine();  
 
-            if(type.ToLower().Equals("txt"))
+            List<Car> carList = new List<Car>();
+            while (type != "") 
             {
-                DLCarText dLCarText = new DLCarText();
-
-                ICarBusiness carTxt = new BusinessTxt(dLCarText);
-                List<Car> carList = carTxt.GetCars();
-
-                foreach(Car car in carList)
+                if(type.Equals(""))
                 {
-                    Console.WriteLine(car.Id + " " + car.Year + " " + car.Make + car.Model);
+                    break;
                 }
-            }
-            else 
-            {
-                //ICarBusiness carXML = new BusinessXML();
+                else if (type.ToLower().Equals("txt"))
+                {
+                    DLCarText dLCarText = new DLCarText();
+
+                    ICarBusiness carTxt = new BusinessTxt(dLCarText);
+                    carList = carTxt.GetCars();
+
+                    foreach (Car car in carList)
+                    {
+                        Console.WriteLine(car.Id + " " + car.Year + " " + car.Make + car.Model);
+                    }
+                }
+                else if (type.ToLower().Equals("xml"))
+                {
+                    DLCarXML dLCarXML = new DLCarXML();
+
+                    ICarBusiness carXML = new BusinessXML(dLCarXML);
+                    carList = carXML.GetCars();
+
+                    foreach (Car car in carList)
+                    {
+                        Console.WriteLine(car.Id + " " + car.Year + " " + car.Make + car.Model);
+                    }
+                }
+
+                Console.WriteLine("Would you like to view the Txt or XML file? Or press ENTER to quit.");
+                type = Console.ReadLine();
             }
         }
     }

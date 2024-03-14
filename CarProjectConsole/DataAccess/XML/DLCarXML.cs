@@ -21,6 +21,11 @@ namespace CarProjectConsole.DataAccess.XML
             getXMLList();
         }
 
+        public void saveChanges(Car car)
+        {
+            throw new NotImplementedException();
+        }
+
         private void getXMLList()
         {
             XmlReader reader = XmlReader.Create(_fileLoc);
@@ -34,19 +39,19 @@ namespace CarProjectConsole.DataAccess.XML
                     Car car = new Car();    
                     if (reader.Name.ToString().Equals("Id"))
                     {
-                        car.Id = Convert.ToInt32(reader.Value.ToString());
+                        car.Id = Convert.ToInt32(reader.ReadElementContentAsString());//Convert.ToInt32(reader.Value.ToString());
                     }
                     else if (reader.Name.ToString().Equals("Year"))
                     {
-                        car.Year = Convert.ToInt32(reader.Value.ToString());
+                        car.Year = Convert.ToInt32(reader.ReadElementContentAsString());
                     }
                     else if (reader.Name.ToString().Equals("Make"))
                     {
-                        car.Make = reader.Value.ToString();
+                        car.Make = reader.ReadElementContentAsString();
                     }
                     else if (reader.Name.ToString().Equals("Model"))
                     {
-                        car.Model = reader.Value.ToString();
+                        car.Model = reader.ReadElementContentAsString();
                     }
                     CarList.Add(car); 
                 }
