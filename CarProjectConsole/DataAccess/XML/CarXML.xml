@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Cars>
+	<Car>
+		<Id>
+			1
+		</Id>
+		<Year>
+			2003
+		</Year>
+		<Make>
+			Honda
+		</Make>
+		<Model>
+			Civic EP3 Si
+		</Model>
+	</Car>
+	<Car>
+		<Id>
+			2
+		</Id>
+		<Year>
+			2000
+		</Year>
+		<Make>
+			Toyota
+		</Make>
+		<Model>
+			Altezza
+		</Model>
+	</Car>
+	<Car>
+		<Id>
+			3
+		</Id>
+		<Year>
+			1972
+		</Year>
+		<Make>
+			Datsun
+		</Make>
+		<Model>
+			260z
+		</Model>
+	</Car>
+</Cars>

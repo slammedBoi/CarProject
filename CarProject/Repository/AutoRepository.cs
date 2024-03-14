@@ -28,5 +28,10 @@ namespace CarProject.Repository
                 carContext.SaveChanges(carObj);
             }
         }
+
+        public List<Car> GetList()
+        {
+            return carContext.carList;
+        }
     }
 }
