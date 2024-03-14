@@ -13,7 +13,7 @@ namespace CarProject.Models
             CarsSet.Add(
                 new Car
                 {
-                    carId = 1,
+                    Id = 1,
                     Make = "Mazda",
                     Model = "RX7",
                     Year = 1999
@@ -21,7 +21,7 @@ namespace CarProject.Models
             CarsSet.Add(
                 new Car
                 {
-                    carId = 2,
+                    Id = 2,
                     Make = "Nissan",
                     Model = "Skyline",
                     Year = 2002

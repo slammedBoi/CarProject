@@ -14,7 +14,9 @@ namespace CarProject.Controllers
     public class CarController : Controller
     {
         CarContext carContext = new CarContext();
-        CarSave carSave = new CarSave();   
+        CarSave carSave = new CarSave();
+        public int listSize { get; set; }
+
         public IActionResult CarDisplay()
         {
             return View();
@@ -22,10 +24,7 @@ namespace CarProject.Controllers
 
         [HttpGet]
         public IActionResult AddNewCar(Car carObj)
-        {
-            int size = carContext.CarsSet.Count;
-            size += 1;
-            carObj.carId = size;
+        {          
             carContext.CarsSet.Add(carObj);
             carSave.SaveCarText(carObj);
 
