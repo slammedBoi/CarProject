@@ -8,9 +8,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{436972A7-0AC5-4DB3-8F14-7F72134B6484}"
 	ProjectSection(SolutionItems) = preProject
 		README_javascript.txt = README_javascript.txt
+		README_repo pattern.txt = README_repo pattern.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarProjectConsole", "CarProjectConsole\CarProjectConsole.csproj", "{E85F040B-EFF7-4825-A761-C1A0D6466ADC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarProjectConsole", "CarProjectConsole\CarProjectConsole.csproj", "{E85F040B-EFF7-4825-A761-C1A0D6466ADC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

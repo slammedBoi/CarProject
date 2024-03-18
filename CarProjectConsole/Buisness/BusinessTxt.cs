@@ -13,13 +13,28 @@ namespace CarProjectConsole.Buisness
         private DLCarText _DLCarTxt {  get; set; }
         
         public BusinessTxt(DLCarText carTxt)
-        {
-            //_DLCarTxt = new DLCarText();    
+        {  
             _DLCarTxt = carTxt;
+        }
+
+        public Car NewCar(string parameters)
+        {
+            string[] carSplit = parameters.Split(" ");
+            Car returnCar = new Car
+            {
+                Id = 0,
+                Year = Convert.ToInt32(carSplit[0]),
+                Make = carSplit[1],
+                Model = carSplit[2]
+            };
+
+            return returnCar;
         }
 
         public void Add(Car inpCar)
         {
+            inpCar.Id = (_DLCarTxt.CarList.Count) + 1;
+
             _DLCarTxt.CarList.Add(inpCar);
             _DLCarTxt.SaveChanges(inpCar);
         }
