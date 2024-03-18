@@ -1,45 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Cars>
-	<Car>
-		<Id>
-			1
-		</Id>
-		<Year>
-			2003
-		</Year>
-		<Make>
-			Honda
-		</Make>
-		<Model>
-			Civic EP3 Si
-		</Model>
-	</Car>
-	<Car>
-		<Id>
-			2
-		</Id>
-		<Year>
-			2000
-		</Year>
-		<Make>
-			Toyota
-		</Make>
-		<Model>
-			Altezza
-		</Model>
-	</Car>
-	<Car>
-		<Id>
-			3
-		</Id>
-		<Year>
-			1972
-		</Year>
-		<Make>
-			Datsun
-		</Make>
-		<Model>
-			260z
-		</Model>
-	</Car>
-</Cars>
+<?xml version="1.0" encoding="utf-8"?>
+<Car xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>16</Id>
+  <Year>2012</Year>
+  <Make>Nissan</Make>
+  <Model>GTR</Model>
+</Car>

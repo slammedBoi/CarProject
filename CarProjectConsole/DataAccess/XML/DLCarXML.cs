@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace CarProjectConsole.DataAccess.XML
 {
@@ -21,9 +22,14 @@ namespace CarProjectConsole.DataAccess.XML
             getXMLList();
         }
 
-        public void saveChanges(Car car)
+        public void SaveChanges(Car car)
         {
-            throw new NotImplementedException();
+            XmlSerializer serializer = new XmlSerializer(typeof(Car));
+            StreamWriter writer = new StreamWriter(_fileLoc);
+
+            serializer.Serialize(writer, car);
+            writer.Close();
+            //throw new NotImplementedException();
         }
 
         private void getXMLList()
@@ -56,6 +62,8 @@ namespace CarProjectConsole.DataAccess.XML
                     CarList.Add(car); 
                 }
             }
+
+            reader.Close();
         }
     }
 }

@@ -9,6 +9,8 @@ namespace CarProjectConsole.Buisness
 {
     internal interface ICarBusiness
     {
+        public Car NewCar(string parameters);
+
         public void Add(Car inpCar);
         public List<Car> GetCars();
     }
